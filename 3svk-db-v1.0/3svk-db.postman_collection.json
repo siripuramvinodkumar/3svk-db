@@ -1,0 +1,46 @@
+{
+  "info": {
+    "name": "3SVK DB v1.0",
+    "_postman_id": "3svk-db-collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "GET /",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/"
+      }
+    },
+    {
+      "name": "POST /save",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Vinod\",\n  \"role\": \"admin\"\n}"
+        },
+        "url": "{{baseUrl}}/save"
+      }
+    },
+    {
+      "name": "GET /data",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/data"
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:5000"
+    }
+  ]
+}
